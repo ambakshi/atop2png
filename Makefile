@@ -15,11 +15,11 @@ clean:
 	atop -PSWP -r $< > $@.tmp && mv $@.tmp $@
 
 
-%-cpl.png: %.cpl
+%-cpl.png: %.cpl bin/cpl2png.sh
 	bin/cpl2png.sh $< $* $@
 
 
-%-swp.png: %.swp
+%-swp.png: %.swp bin/swp2png.sh
 	bin/swp2png.sh $< $* $@
 
 
